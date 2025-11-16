@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Modern CV styling (presentation only) */
+.profile-card{ max-width:320px; }
+.profile-avatar img{ width:160px; height:160px; object-fit:cover; border-radius:50%; }
+.avatar-placeholder{ width:160px; height:160px; background:linear-gradient(135deg,#e9eefc,#f5fbff); color:#344055; font-size:56px; }
+.skill-badge{ background:linear-gradient(90deg,#eef2ff,#f8fbff); color:#0f172a; padding:.4rem .6rem; border-radius:999px; font-weight:600; }
+.profile-card .btn{ font-weight:600; }
+
+/* Card and section spacing tweaks */
+.profile-card, .bg-white.p-4{ transition: transform .12s ease, box-shadow .12s ease; }
+.profile-card:hover, .bg-white.p-4:hover{ transform: translateY(-4px); box-shadow: 0 12px 30px rgba(17,24,39,0.06); }
+
+@media (max-width:767px){
+    .profile-avatar img, .avatar-placeholder{ width:120px; height:120px; font-size:42px; }
+    .profile-card{ max-width:100%; }
+}
+
+
